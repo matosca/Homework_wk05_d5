@@ -45,24 +45,25 @@ class CardGame
 
   else
     card2
+# Correction 10: Missing return in this option --return card2.
   end
 end
-# Correction 10: This function is not indented properly. For readability convention, it should be indented accordingly.
+# Correction 11: This function is not indented properly. For readability convention, it should be indented accordingly.
 
 end
-# Correction 11: The above end is closing the class Card but leaving outside of it a function that calls self.cards_total(cards). So, the end should be placed just after the last method defined for this class.
+# Correction 12: The above end is closing the class Card but leaving outside of it a function that calls self.cards_total(cards). So, the end should be placed just after the last method defined for this class.
 
 
 def self.cards_total(cards)
   total
-# Correction 12: Total is being used as variable in this function however it has not stored or set any value for it. So, at the moment, it does not have any functionality; total should be set to 0 since it is used to record the total values of cards, for each iteration in this "for...loop" a card value is being added and stored in total incrementing the previous value.
+# Correction 13: Total is being used as variable in this function however it has not stored or set any value for it. So, at the moment, it does not have any functionality; total should be set to 0 since it is used to record the total values of cards, for each iteration in this "for...loop" a card value is being added and stored in total incrementing the previous value.
 
   for card in cards
     total += card.value
     return "You have a total of" + total
-# Correction 13: The above "return" statement should be written outside the for loop; because, otherwise, the for...loop will evaluate the elements but it will always return the values for first element evaluated. Thus, we are not going to get the total amount (expected results).
+# Correction 14: The above "return" statement should be written outside the for loop; because, otherwise, the for...loop will evaluate the elements but it will always return the values for first element evaluated. Thus, we are not going to get the total amount (expected results).
 
-# Correction 14: Also, in Ruby you can use string interpolation in order to print the result of a particular variables and avoid to much of string concatenation --return "You have a total of #{total}". It saves you time and it is more efficient.
+# Correction 15: Also, in Ruby you can use string interpolation in order to print the result of a particular variables and avoid to much of string concatenation --return "You have a total of #{total}". It saves you time and it is more efficient.
 
   end
 end
